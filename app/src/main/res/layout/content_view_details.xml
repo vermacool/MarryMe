@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp">
+
+
+        <LinearLayout
+            android:padding="@dimen/activity_horizontal_margin"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+           <ImageView
+               android:layout_width="200dp"
+               android:layout_height="200dp"
+               android:id="@+id/imagedetails"
+               android:background="@drawable/blanck"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+                    <TextView
+                        android:text="FirstName:"
+                        android:paddingRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/firstnamedetails"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:text="LastName:"
+                        android:paddingRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/lastnamedetals"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:text="Email:"
+                        android:paddingRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/emaildetails"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:text="City:"
+                        android:paddingRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/citydetails"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:text="Contact:"
+                        android:paddingRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/contactdetails"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"/>
+
+                </TableRow>
+
+
+
+            </TableLayout>
+        </LinearLayout>
+
+</LinearLayout>

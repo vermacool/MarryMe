@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF3FA"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/LogoContainer"
+        android:background="#B72530"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="@drawable/logo"
+            android:layout_gravity="center"
+             android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+        <ImageView
+            android:id="@+id/backiconfm2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:background="@drawable/skipicon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/LogoContainer"
+        android:id="@+id/BasicInformationContainer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#71717d"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/BasicInfo"
+            android:id="@+id/BasicInformation"
+            android:textAlignment="gravity"
+            android:gravity="center" />
+
+        <View
+            android:id="@+id/primerdivisor"
+            android:layout_below="@+id/WelcomeText"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:background="#9797A1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Manditory"
+            android:id="@+id/MendatoryFields"
+            android:textAlignment="gravity"
+            android:gravity="right" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/BasicInformationContainer"
+        android:background="#EEF3FA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/MobileContainer"
+                android:layout_below="@id/BasicInformationContainer"
+                android:layout_marginTop="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/Mobile"
+                    android:textColor="#71717d"
+                    android:textSize="20sp"
+                    android:id="@+id/MobileNo"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@+id/MobileNo"
+                    android:text="+91"
+                    android:id="@+id/PhoneNumberInitial"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="phone"
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/border"
+                    android:id="@+id/PhoneNumberLast"
+                    android:layout_alignTop="@+id/PhoneNumberInitial"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/PhoneNumberInitial"
+                    android:layout_toEndOf="@+id/PhoneNumberInitial" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/MobileContainer"
+                android:layout_marginTop="20dp"
+                android:id="@+id/DOBContainer">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/DOB"
+                    android:textColor="#71717d"
+                    android:textSize="20sp"
+                    android:id="@+id/DOB" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@+id/DOB"
+                    android:id="@+id/dobid"
+                    android:entries="@array/Date"
+                    android:paddingLeft="5dp"
+                    android:editable="false"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/HeightContainer"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/DOBContainer">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/Height"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/Height" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown"
+                    android:layout_below="@+id/Height"
+                    android:prompt="@string/height_prompt"
+                    android:entries="@array/Height"
+                    android:id="@+id/spinner4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/WeightContainer"
+                android:layout_below="@id/HeightContainer"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/Weight"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/Weight" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@+id/Weight"
+                    android:entries="@array/Weight"
+                    android:prompt="@string/weight_prompt"
+                    android:id="@+id/spinner5" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/GenderContainer"
+                android:layout_below="@id/WeightContainer"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/Gender"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/Gender" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@+id/Gender"
+                    android:entries="@array/gender"
+                    android:prompt="@string/gender_prompt"
+                    android:id="@+id/spinner6" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/ContinueButtonContainer"
+                android:layout_below="@id/GenderContainer">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/next1"
+                    android:text="@string/Continue"
+                    android:background="@drawable/buttonborder"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
+
+
+
+
+

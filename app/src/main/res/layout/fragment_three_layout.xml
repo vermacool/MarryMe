@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#EEF3FA">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/LogoContainer"
+        android:background="#B72530"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+        <ImageView
+            android:id="@+id/backiconfm3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:background="@drawable/skipicon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/LogoContainer"
+        android:id="@+id/ReligionInformationContainer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#71717d"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/ReligionInfo"
+            android:id="@+id/ReligionInfo"
+            android:textAlignment="gravity"
+            android:gravity="center" />
+
+        <View
+            android:id="@+id/primerdivisor"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:background="#9797A1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Manditory"
+            android:id="@+id/MendatoryFields"
+            android:textAlignment="gravity"
+            android:gravity="right" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/AccountInformationContainer"
+        android:background="#EEF3FA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ReligionInformationContainer"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ReligionContainer">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Religion"
+            android:textSize="20sp"
+            android:textColor="#71717d"
+            android:id="@+id/MobileNo" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:layout_below="@id/MobileNo"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner7"
+            android:entries="@array/religion"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/MotherTongueContainer"
+        android:layout_below="@id/ReligionContainer">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/MotherTongue"
+            android:textColor="#71717d"
+            android:textSize="20sp"
+            android:id="@+id/MotherTongue" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner8"
+            android:entries="@array/mothertongue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CasteContainer"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/MotherTongueContainer"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Caste"
+            android:textColor="#71717d"
+            android:textSize="20sp"
+            android:id="@+id/Caste" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:entries="@array/cast"
+            android:prompt="@string/weight_prompt"
+            android:id="@+id/spinner9" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/MaritalStatusContainer"
+        android:layout_below="@id/CasteContainer"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/MaritalStatus"
+            android:textColor="#71717d"
+            android:textSize="20sp"
+            android:id="@+id/MaritalStatus" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:spinnerMode="dropdown"
+            android:entries="@array/maritalstatus"
+            android:background="@drawable/border"
+            android:layout_below="@+id/MaritalStatus"
+            android:id="@+id/spinner10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/ManglikContainer"
+        android:layout_below="@id/MaritalStatusContainer"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Manglik"
+            android:textColor="#71717d"
+            android:textSize="20sp"
+            android:id="@+id/Manglik" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:spinnerMode="dropdown"
+            android:entries="@array/Manglik"
+            android:id="@+id/spinner11" />
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/ContinueButtonContainer"
+                android:layout_below="@id/ManglikContainer">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/next3"
+                    android:text="@string/Continue"
+                    android:background="@drawable/buttonborder"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+
+
+            </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEF3FA">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/LogoContainer"
+        android:background="#B72530">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/LogoContainer"
+        android:layout_marginTop="20dp"
+        android:id="@+id/PartnerPreferencesContainer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#71717d"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/PartnerPreferences"
+            android:id="@+id/PartnerPreferences"
+            android:textAlignment="gravity"
+            android:gravity="center" />
+
+        <View
+            android:id="@+id/primerdivisor"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:background="#9797A1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Manditory"
+            android:id="@+id/MendatoryFields"
+            android:textAlignment="gravity"
+            android:gravity="right" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/LogoContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PartnerPreferencesContainer"
+                android:layout_marginTop="20dp"
+                android:id="@+id/LookingForContainer">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/blanck"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/profileimage"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/LookingFor"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/LookinFor"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/LookingFor"
+                    android:id="@+id/spinner20" />
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/PartnerAgeContainer"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/LookingForContainer">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerAge"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/PartnerAge" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@+id/PartnerAge"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/agefrom"
+                    android:id="@+id/spinner21" />
+
+                <Spinner
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:entries="@array/ageto"
+                    android:layout_below="@+id/PartnerAge"
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/spinner31"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/PartnersCountryContainer"
+                android:layout_below="@id/PartnerAgeContainer"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerCountry"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/PartnerCountry" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:spinnerMode="dropdown"
+                    android:background="@drawable/border"
+                    android:id="@+id/spinner22"
+                    android:entries="@array/country"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PartnerCountry"
+                android:layout_marginTop="20dp"
+                android:id="@+id/PartnerReligionContainer">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerReligion"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/PartnerReligion"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/spinner23"
+                    android:entries="@array/religion"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/PartnerCasteContainer"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/PartnerReligionContainer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerCaste"
+                    android:textColor="#71717d"
+                    android:textSize="20sp"
+                    android:id="@+id/PartnerCaste" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/spinner24"
+                    android:entries="@array/cast"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/PartnerHeightContainer"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/PartnerCasteContainer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerHeight"
+                    android:textColor="#71717d"
+                    android:textSize="20sp"
+                    android:id="@+id/PartnerHeight" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown"
+                    android:layout_below="@+id/PartnerHeight"
+                    android:id="@+id/spinner25"
+                    android:prompt="@string/heightfrom_prompt"
+                    android:entries="@array/HeightFrom"/>
+
+                <Spinner
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@+id/PartnerHeight"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/spinner26"
+                    android:prompt="@string/HeightTo_prompt"
+                    android:entries="@array/HeightTo"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PartnerHeightContainer"
+                android:layout_marginTop="20dp"
+                android:id="@+id/PartnerEducationContainer">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerEducation"
+                    android:textColor="#71717d"
+                    android:textSize="20sp"
+                    android:id="@+id/PartnerEducation"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/spinner27"
+                    android:entries="@array/education"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PartnerEducationContainer"
+                android:layout_marginTop="20dp"
+                android:id="@+id/PartnerComplexionContainer">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerComplexion"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/PartnerComplexion"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/Complexion"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/spinner28" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PartnerComplexionContainer"
+                android:layout_marginTop="20dp"
+                android:id="@+id/PartnerMotherTongueContainer">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerMotherTongue"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/PartnerMotherTongue"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/spinner29"
+                    android:entries="@array/mothertongue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PartnerMotherTongueContainer"
+                android:layout_marginTop="20dp"
+                android:id="@+id/PartnerAnnualIncomeContainer">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/PartnerAnnualIncome"
+                    android:textSize="20sp"
+                    android:textColor="#71717d"
+                    android:id="@+id/PartnerAnnualIncome"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/border"
+                    android:entries="@array/PartnerIncome"
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/spinner30"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/ContinueButtonContainer"
+                android:layout_below="@id/PartnerAnnualIncomeContainer">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Continue"
+                    android:background="@drawable/buttonborder"
+                    android:textColor="#ffffff"
+                    android:text="update"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#EEF3FA">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/LogoContainer"
+        android:background="#B72530"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+        <ImageView
+            android:id="@+id/backiconfm4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:background="@drawable/skipicon" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/LogoContainer"
+        android:id="@+id/EducationDetailsContainer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#71717d"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Education"
+            android:id="@+id/Education"
+            android:textAlignment="gravity"
+            android:gravity="center" />
+
+        <View
+            android:id="@+id/primerdivisor"
+            android:layout_below="@+id/WelcomeText"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:background="#9797A1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Manditory"
+            android:id="@+id/MendatoryFields"
+            android:textAlignment="gravity"
+            android:gravity="right" />
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/AccountInformationContainer"
+        android:background="#EEF3FA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EducationDetailsContainer"
+        android:layout_marginTop="20dp"
+        android:id="@+id/EducationTextContainer">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/EducationText"
+            android:textSize="20sp"
+            android:textColor="#71717d"
+            android:id="@+id/EducationText"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner12"
+            android:entries="@array/education"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/EmployedInContainer"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/EducationTextContainer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Employed"
+            android:textSize="20sp"
+            android:textColor="#71717d"
+            android:id="@+id/EmployedIn" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:spinnerMode="dropdown"
+            android:entries="@array/EmployedInArray"
+            android:id="@+id/spinner13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/OccupationContainer"
+        android:layout_below="@id/EmployedInContainer"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:textColor="#71717d"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Occupation"
+            android:id="@+id/Occupation" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/border"
+            android:id="@+id/spinner14"
+            android:entries="@array/occupation"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/DesignationContainer"
+        android:layout_below="@id/OccupationContainer"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Designation"
+            android:textSize="20sp"
+            android:textColor="#71717d"
+            android:id="@+id/Designation" />
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:entries="@array/Designation"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/AnnualIncomeContainer"
+        android:layout_below="@id/DesignationContainer"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:textColor="#71717d"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/AnnualIncome"
+            android:id="@+id/AnnualIncome" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:entries="@array/AnnualIncome"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner16" />
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/ContinueButtonContainer"
+                android:layout_below="@id/DesignationContainer">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/next4"
+                    android:text="@string/Continue"
+                    android:background="@drawable/buttonborder"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+
+
+
+            </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
